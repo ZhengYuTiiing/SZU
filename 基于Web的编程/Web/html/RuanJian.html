@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--声明当前页面的编码格式 UTF-8（国际编码）gbk(中文简体)-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <!--声明当前页面的三要素-->
+  <title>APP俱乐部</title>
+  <meta name="Keywords" content="APP">
+  <meta name="Description" content="介绍APP的网站">
+  <link rel="stylesheet" type="text/css" href="../css/RuanJian.css" />
+</head>
+<body>
+<!--nav -->
+<div id="nav">
+  <div class="header">
+    <div class="logo">
+      <img src="../img/logo.png" alt="" style="height: 60px;width: 300px"/>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="DongTai.html">动态</a></li>
+        <li class="nowNav">软件</li>
+      </ul>
+    </div>
+    <div class="searchTable">
+      <label>
+        <input class="searchInput" id="searchInput3" type="text" maxlength="100" placeholder="输入关键字" value="">
+        <input class="searchButton" type="image" alt="搜索" src="../img/searchButton.png" onclick="searchContent(3)">
+      </label>
+    </div>
+    <div class="login">
+      <a href="../html/login.html?request=login" class="a1">登录</a>
+      <a href="../html/login.html?request=register" class="a2">注册</a>
+    </div>
+  </div>
+</div>
+<!--nav end-->
+<div style="margin:70px auto; position: relative;width: 1130px;background: #f4f6f9">
+  <div class="tbA">
+    <ul>
+      <li>
+        <a class="oA" href="APPInfo.html?appId=0"><img src="../img/崩坏3.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a href="APPInfo.html?appId=0" target="_self" onclick="handleLinkClick(event)">
+            <span class="type">崩坏3</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a class="oA"  href="APPInfo.html?appId=1"><img src="/img/元梦之星LOGO.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a  href="APPInfo.html?appId=1">
+            <span class="type">元梦之星</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a class="oA"  href="APPInfo.html?appId=2"><img src="../img/爱奇艺LOGO.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a  href="APPInfo.html?appId=2">
+            <span class="type">爱奇艺</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a class="oA"  href="APPInfo.html?appId=3"><img src="../img/腾讯视频LOGO.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a  href="APPInfo.html?appId=3">
+            <span class="type">腾讯视频</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a class="oA"  href="APPInfo.html?appId=4"><img src="../img/CSDNLOGO.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a  href="APPInfo.html?appId=4">
+            <span class="type">CSDN</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a class="oA"  href="APPInfo.html?appId=5"><img src="../img/蛋仔派对LOGO.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a  href="APPInfo.html?appId=5">
+            <span class="type">蛋仔派对</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a class="oA"  href="APPInfo.html?appId=6"><img src="../img/抖音LOGO.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a  href="APPInfo.html?appId=6">
+            <span class="type">抖音</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a class="oA"  href="APPInfo.html?appId=7"><img src="../img/淘宝LOGO.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a  href="APPInfo.html?appId=7">
+            <span class="type">淘宝</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a class="oA" href="APPInfo.html?appId=0"><img src="../img/QQLOGO.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a href="APPInfo.html?appId=0" target="_self" onclick="handleLinkClick(event)">
+            <span class="type">QQ</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a class="oA"  href="APPInfo.html?appId=1"><img src="/img/哔哩哔哩LOGO.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a  href="APPInfo.html?appId=1">
+            <span class="type">哔哩哔哩</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a class="oA"  href="APPInfo.html?appId=2"><img src="../img/美团LOGO.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a  href="APPInfo.html?appId=2">
+            <span class="type">美团</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a class="oA"  href="APPInfo.html?appId=3"><img src="../img/KeepLOGO.png" width="250px" height="250px"/></a>
+        <div class="txtBox">
+          <a  href="APPInfo.html?appId=3">
+            <span class="type">Keep</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div style="clear:both;"></div>
+<div style="width: 100%;">
+  <div class="footerContainer">
+    <div class="texts">
+      <a href="" rel="noopener noreferrer" target="_blank" class="mw_blue">粤KFC备17040376号</a>
+      <span class="split">|</span> <a href="#" class="">粤网文[2023]1234号</a>
+      <span class="split">|</span> <a href="#" class="">电子营业执照</a>
+    </div>
+    <div class="texts">
+      <span>中国反网络病毒联盟应用商店自律组</span>
+      <span class="split">|</span>
+      <a href="https://www.12377.cn/" target="_blank">不良信息举报中心</a>
+      <span class="split">|</span>
+      <span>APP俱乐部  版权所有   © 2021-2023
+            </span>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>

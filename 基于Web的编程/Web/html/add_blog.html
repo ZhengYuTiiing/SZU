@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>添加博客</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="../js/index.js" type="text/javascript"></script>
+    <script src="../js/add_blog.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/add_blog.css" />
+</head>
+<body>
+    <!--导航栏-->>
+        <div id="nav">
+            <div class="header">
+            <div class="logo">
+                <img src="../img/logo.png" alt="" style="height: 60px;width: 300px"/>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="nowNav">首页</li>
+                    <li><a href="DongTai.html">动态</a></li>
+                    <li><a href="RuanJian.html">软件</a></li>
+                </ul>
+            </div>
+            <div class="searchTable">
+                <label>
+                    <input class="searchInput" id="searchInput5" type="text" maxlength="100" placeholder="输入关键字" value="">
+                    <input class="searchButton" type="image" alt="搜索" src="../img/searchButton.png" onclick="searchContent(5)">
+                </label>
+            </div>
+            <div class="login">
+                <a href="../html/login.html?request=login" class="a1">登录</a>
+                <a href="../html/login.html?request=register" class="a2">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="upload">
+             <!-- 输入标题 -->
+        <input id="title" type="text" placeholder="请输入标题"><br>
+        <!-- 输入正文-->
+        <textarea id="content" type="text"  placeholder="请输入正文"></textarea><br>
+        <p>选择图片(最多选择3张)<button id="imagebtn">选择图片</button></p>
+        <input id="image" type="file" accept="image/*" multiple="multiple" />
+        
+        <div id="photo-container">
+          
+        </div>
+        <p>选择音频 <button id="audiobtn">选择音频 </button></p>
+        <input id="audio" type="file" accept="audio/*"  multiple="multiple"/>
+       
+        <p>选择视频 <button id="videobtn">选择视频 </button></p>
+        <input id="video" type="file" accept="video/*"  multiple="multiple"/>
+        
+        <br />
+        <button type="button" id="addBlog">发布博客</button>
+
+    </div>
+       
+         <!--页脚-->
+        <div style="width: 100%;">
+            <div class="footerContainer">
+                <div class="texts">
+                    <a href="" rel="noopener noreferrer" target="_blank" class="mw_blue">粤KFC备17040376号</a>
+                    <span class="split">|</span> <a href="#" class="">粤网文[2023]1234号</a>
+                    <span class="split">|</span> <a href="#" class="">电子营业执照</a>
+                </div>
+                <div class="texts">
+                    <span>中国反网络病毒联盟应用商店自律组</span>
+                    <span class="split">|</span>
+                    <a href="https://www.12377.cn/" target="_blank">不良信息举报中心</a>
+                    <span class="split">|</span>
+                    <span>APP俱乐部  版权所有   © 2021-2023
+                  </span>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var getUserPhoto = document.getElementById("image");
+            getUserPhoto.onchange = function () {
+              var files = this.files;
+              console.log(files);
+              for (var i = 0; i < files.length; i++) {
+                try {
+                  var reader = new FileReader();
+                  var fileSize = files[i].size; // 获取文件大小
+                  // 检查文件大小，这里限制为 5MB
+                  if (fileSize > 5 * 1024 * 1024) {
+                    throw new Error("文件过大，请选择小于5MB的图片");
+                  }
+                  // 使用 addEventListener，确保每个事件处理程序都引用正确的文件
+                  reader.addEventListener("load", function (event) {
+                    var image = document.createElement("img");
+                    image.draggable = true;
+                    image.src = event.target.result;
+                    var showPicture = document.getElementById("photo-container");
+                    showPicture.append(image);
+                    image.addEventListener("dragstart", handleDragStart);
+                    image.addEventListener("dragover", handleDragOver);
+                    image.addEventListener("drop", handleDrop);
+                  });
+                  reader.readAsDataURL(files[i]);
+                } catch (error) {
+                  console.error("发生错误:", error.message);
+                  alert("发生错误：" + error.message);
+                }
+              }
+            };
+        
+            // 记录拖拽的照片元素
+            let draggedPhoto = null;
+            // 拖拽开始时保存被拖拽的照片元素
+            function handleDragStart(event) {
+              draggedPhoto = event.target;
+            }
+            // 阻止默认的拖拽行为
+            function handleDragOver(event) {
+              event.preventDefault();
+            }
+            // 处理照片放置的位置
+            function handleDrop(event) {
+              event.preventDefault();
+              // 将被拖拽的照片插入到目标位置之前
+              const dropTarget = event.target;
+              const parentContainer = dropTarget.parentElement;
+              parentContainer.insertBefore(draggedPhoto, dropTarget);
+            }
+          </script>
+</body>
+</html>

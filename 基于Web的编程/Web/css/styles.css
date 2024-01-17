@@ -1,0 +1,619 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*水平直线*/
+.horizontal-line {
+    width: 1271px;
+    height: 1px;
+    background-color: #828187;
+}
+
+/*顶部布局开始*/
+.t1 {
+    width: 100%;
+    height: 80px;
+    border: 0px solid red;
+}
+
+.t1-headflag {
+    margin-top: 8px;
+    margin-left: 33px;
+    width: 207px;
+    height: 62px;
+    border: 0px solid red;
+}
+
+/*.t1-headflagother {
+    width: 1140px;
+    height: 70px;
+    border: 1px solid red;
+    float: right;
+    /*浮动到右边
+    margin-top: 10px;
+    background-position: left;
+    line-height: 70px;
+}
+*/
+.t1-input {
+    width: 420px;
+    height: 27px;
+    margin-left: 0px;
+}
+
+.t1-searchimage {
+
+    position: relative;
+    top: 5px;
+    left: -5px;
+}
+
+.t1-list {
+
+    width: 390px;
+    height: 80px;
+    border: 0px solid green;
+    float: right;
+    margin-left: 115px;
+    position: absolute;
+    top: 0px;
+    right: 68px;
+
+}
+
+.t1-list li {
+    list-style: none;
+    /*去除小点*/
+    float: right;
+    /*排成一行*/
+    margin-right: 25px;
+    line-height: 60px;
+}
+
+.lista {
+    text-decoration: none;
+    /*没有下划线*/
+    font-size: 12px;
+}
+
+/*顶部布局结束*/
+/*个人头像*/
+.t2 {
+    width: 100%;
+    height: 120px;
+    border: 0px solid red;
+
+}
+
+.t22 {
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 162px;
+    height: 100px;
+}
+
+.t22other {
+    width: 1055px;
+    height: 100px;
+    border: 0px solid red;
+    float: right;
+    /*浮动到右边*/
+    margin-top: 10px;
+    background-position: left;
+    line-height: 70px;
+    position: relative;
+    /*添加相对定位*/
+}
+
+.t22other li {
+    list-style: none;
+    margin-bottom: -40px;
+}
+
+.t2-editms {
+    width: 120px;
+    height: 40px;
+    border: 0px solid #3b99fc;
+    margin: 0px auto;
+    line-height: 40px;
+    position: absolute;
+    /*添加绝对定位*/
+    right: 30px;
+    /*蓝框在父元素右侧，顶部*/
+    top: 50px;
+    font-size: large;
+    color: #2676e3;
+
+    line-height: 40px;
+
+}
+
+/*文本框开始*/
+.t4 {
+    width: 100%;
+    height: 450px;
+    border: 0px solid red;
+}
+
+.t4-1 {
+
+    width: 100%;
+    height: 40px;
+    border: 0px solid green;
+
+}
+
+.t4-11 {
+    width: 70px;
+    height: 25px;
+    border: 0px solid green;
+    font-size: medium;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.t4-2 {
+    width: 100%;
+    height: 30px;
+    border: 0px solid red;
+    position: relative;
+
+}
+
+.t4-22 {
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    font-weight: 100;
+    border: 0px solid green;
+    line-height: 30px;
+    margin-left: 10px;
+
+}
+
+.t4-222 {
+    width: 140px;
+    height: 30px;
+    font-size: 10px;
+    font-weight: 100;
+    border: 0px solid green;
+    line-height: 30px;
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+
+}
+
+.t4-3 {
+    width: 100%;
+    height: 40px;
+    border: 0px solid green;
+}
+
+.t4-33 {
+    width: 600px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    float: left;
+
+}
+
+.t4-4 {
+    width: 100%;
+    height: 60px;
+    border: 0px solid red;
+    position: relative;
+}
+
+.t4-44img {
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+}
+
+.t4-44name {
+    width: 100px;
+    height: 45px;
+    border: 0px solid red;
+    margin-left: 20px;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    float: left;}
+
+
+    .t4-44name1 {
+        font-size: 10px;
+        font-weight: 300;
+        list-style: none;
+    }
+
+.t4-44name2 {
+    font-size: 8px;
+    font-weight: 100;
+    list-style: none;
+}
+
+.t4-5 {
+    width: 100%;
+    height: 80px;
+    border: 0px solid green;
+    margin-left: 10px;
+
+}
+
+.t4-6 {
+    width: 100%;
+    height: 40px;
+    border: 0px solid green;
+    position: relative;
+
+}
+
+.t4-6-1 {
+    width: 120px;
+    height: 40px;
+    font-size: 8px;
+    font-weight: 400;
+    background-color: #D29A78;
+    margin-left: 10px;
+    line-height: 40px;
+}
+
+.t4-6-2 {
+    width: 110px;
+    height: 30px;
+    font-size: 8px;
+    font-weight: 100;
+    margin-left: 10px;
+    float: left;
+    border: 0px solid red;
+    position: absolute;
+    list-style: none;
+    font-size: 8px;
+    font-weight: 10;
+    left: 150px;
+    top: 10px;
+    line-height: 30px;
+
+}
+
+.t4-6-3 {
+    width: 110px;
+    height: 30px;
+    font-size: 8px;
+    font-weight: 100;
+    margin-left: 10px;
+    float: left;
+    border: 0px solid red;
+    position: absolute;
+    list-style: none;
+    font-size: 8px;
+    font-weight: 10;
+    left: 260px;
+    top: 10px;
+    line-height: 30px;
+}
+
+.t4-6-4 {
+    width: 110px;
+    height: 30px;
+    font-size: 8px;
+    font-weight: 100;
+    margin-left: 10px;
+    float: left;
+    border: 0px solid red;
+    position: absolute;
+    list-style: none;
+    font-size: 8px;
+    font-weight: 10;
+    left: 370px;
+    top: 10px;
+    line-height: 30px;
+}
+
+.t4-6-5 {
+    width: 110px;
+    height: 30px;
+    font-size: 8px;
+    font-weight: 100;
+    margin-left: 10px;
+    float: left;
+    border: 0px solid red;
+    position: absolute;
+    list-style: none;
+    font-size: 8px;
+    font-weight: 10;
+    top: 10px;
+    left: 480px;
+    line-height: 30px;
+
+}
+
+
+/*文本框结束*/
+/*个人资料编辑开始*/
+.edit {
+    background-color: #ECE6E6;
+    width: 100%;
+    height: 60px;
+    border: 0px solid red;
+
+}
+
+.editback {
+    line-height: 60px;
+    font-size: larger;
+    font-weight: 200;
+}
+
+.editword {
+    text-align: center;
+    line-height: 60px;
+    margin-top: -60px;
+
+}
+
+.editpersonall {
+    width: 100%;
+    height: auto;
+    border: 0px solid red;
+
+}
+
+.editpersontouxiang {
+    width: 100%;
+    height: 80px;
+    border: 0px solid red;
+    position: relative;
+}
+
+.touxiangimg {
+    width: 110px;
+    height: 80px;
+    position: absolute;
+    float: left;
+    left: 100px;
+    top: 0px;
+
+}
+
+.word {
+    width: 50px;
+    height: 80px;
+    border: 0px solid #828187;
+    line-height: 80px;
+
+}
+
+.wordex {
+    width: 100px;
+    height: 60px;
+    border: 0px solid #828187;
+    line-height: 60px;
+
+}
+
+.editpersonother {
+    width: 100%;
+    height: 60px;
+    border: 0px solid red;
+    position: relative;
+
+}
+
+.nichen {
+    float: left;
+    border: 0px solid green;
+    height: 60px;
+    width: 100px;
+    position: absolute;
+    top: 146px;
+    left: 103px;
+    line-height: 60px;
+}
+
+.editid {
+    float: left;
+    border: 0px solid green;
+    height: 60px;
+    width: 100px;
+    position: absolute;
+    top: 208px;
+    left: 103px;
+    line-height: 60px;
+}
+
+.editinput {
+    float: left;
+    height: 60px;
+    width: 500px;
+    position: absolute;
+    top: 263px;
+    left: 103px;
+    line-height: 60px;
+}
+
+.editaddress {
+    float: left;
+    border: 0px solid green;
+    height: 60px;
+    width: 100px;
+    position: absolute;
+    top: 330px;
+    left: 103px;
+    line-height: 60px;
+}
+
+.editsex {
+    float: left;
+    border: 0px solid green;
+    height: 60px;
+    width: 100px;
+    position: absolute;
+    top: 397px;
+    left: 103px;
+    line-height: 60px;
+}
+
+.changetnew1 {
+    float: right;
+    height: 60px;
+    width: 100px;
+    border: 0px solid green;
+    position: absolute;
+    top: 60px;
+    left: 550px;
+    line-height: 80px;
+}
+
+.changetnew2 {
+    float: right;
+    height: 60px;
+    width: 100px;
+    border: 0px solid green;
+    position: absolute;
+    top: 145px;
+    left: 550px;
+    line-height: 60px;
+}
+
+.changetnew3 {
+    float: right;
+    height: 60px;
+    width: 100px;
+    border: 0px solid green;
+    position: absolute;
+    top: 205px;
+    left: 550px;
+    line-height: 60px;
+}
+
+
+
+.changetnew4 {
+    float: right;
+    height: 60px;
+    width: 100px;
+    border: 0px solid green;
+    position: absolute;
+    top: 272px;
+    left: 550px;
+    line-height: 60px;
+}
+
+.changetnew5 {
+    float: right;
+    height: 60px;
+    width: 100px;
+    border: 0px solid green;
+    position: absolute;
+    top: 330px;
+    left: 550px;
+    line-height: 60px;
+}
+
+.changetnew6 {
+    float: right;
+    height: 60px;
+    width: 100px;
+    border: 0px solid green;
+    position: absolute;
+    top: 397px;
+    left: 550px;
+    line-height: 60px;
+}
+
+/*更改开始*/
+.touxiang {
+    height: 80px;
+    width: 100px;
+    border: 0px solid green;
+    position: absolute;
+    top: 60px;
+    line-height: 80px;
+    left: 104px;
+}
+
+.username {
+    position: absolute;
+    height: 60px;
+    width: 100px;
+    border: 0px solid green;
+    line-height: 80px;
+    left: 104px;
+    top: 146px;
+}
+
+.usernichen {
+    position: absolute;
+    height: 60px;
+    width: 100px;
+    border: 0px solid green;
+    line-height: 80px;
+    left: 104px;
+    top: 210px;
+}
+
+.usernumber {
+    position: absolute;
+    height: 60px;
+    width: 100px;
+    border: 0px solid green;
+    line-height: 80px;
+    left: 104px;
+    top: 267px;
+}
+
+.userbox {
+    position: absolute;
+    height: 60px;
+    width: 100px;
+    border: 0px solid green;
+    line-height: 80px;
+    left: 104px;
+    top: 337px;
+}
+
+.useraddress {
+    position: absolute;
+    height: 60px;
+    width: 200px;
+    border: 0ch solid green;
+    line-height: 80px;
+    left: 104px;
+    top: 400px;
+}
+
+.touxiangmain {
+    width: 131px;
+    height: 120px;
+    border: 0px solid green;
+    position: absolute;
+    top: 83px;
+    left: 20px
+}
+
+.useridmain {
+    width: 300px;
+    height: 44px;
+    border: 0px solid red;
+    position: absolute;
+    top: 83px;
+    margin-left: 184px;
+}
+
+/*.inputfile1 {
+    border: 1px solid green;
+    width: 400px;
+    height: 200px;
+    left: 300px;
+}
+
+/*个人资料结x束*/

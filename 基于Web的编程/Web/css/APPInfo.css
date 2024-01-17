@@ -1,0 +1,319 @@
+.APPInfo{
+    margin: 70px 100px;
+}
+.background-fx {
+    margin-top: 70px;
+    position: absolute;
+    left: 60px;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    overflow: hidden;
+    opacity: 1;
+    z-index: -1
+}
+
+.shape-01 {
+    position: absolute;
+    top: 11%;
+    right: 42%;
+    -webkit-animation: animationFramesTwo 13s linear infinite;
+    animation: animationFramesTwo 13s linear infinite
+}
+
+.shape-02 {
+    position: absolute;
+    top: 27%;
+    left: 17%;
+    -webkit-animation: animationFramesFour 25s linear infinite alternate;
+    animation: animationFramesFour 25s linear infinite alternate
+}
+
+.shape-03 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-animation: animationFramesThree 35s linear infinite alternate;
+    animation: animationFramesThree 35s linear infinite alternate
+}
+
+.shape-04 {
+    position: absolute;
+    top: 40%;
+    right: 23%;
+    -webkit-animation: animationFramesFour 20s linear infinite alternate;
+    animation: animationFramesFour 20s linear infinite alternate
+}
+
+.shape-05 {
+    position: absolute;
+    bottom: 62%;
+    right: 28%;
+    -webkit-animation: animationFramesOne 15s linear infinite;
+    animation: animationFramesOne 15s linear infinite
+}
+
+.shape-06 {
+    position: absolute;
+    bottom: 73%;
+    left: 38%;
+    -webkit-animation: animationFramesFour 20s linear infinite alternate;
+    animation: animationFramesFour 20s linear infinite alternate
+}
+
+.shape-07 {
+    position: absolute;
+    left: 14%;
+    bottom: 54%;
+    -webkit-animation: animationFramesOne 17s linear infinite;
+    animation: animationFramesOne 17s linear infinite
+}
+
+.shape-08 {
+    position: absolute;
+    left: 14%;
+    top: 60%;
+    -webkit-animation: animationFramesOne 20s linear infinite alternate;
+    animation: animationFramesOne 20s linear infinite alternate
+}
+
+.shape-09 {
+    position: absolute;
+    top: 22%;
+    left: 41%;
+    -webkit-animation: animationFramesOne 15s linear infinite;
+    animation: animationFramesOne 15s linear infinite
+}
+
+.shape-10 {
+    position: absolute;
+    top: 8%;
+    right: 6%;
+    -webkit-animation: animationFramesOne 15s linear infinite;
+    animation: animationFramesOne 15s linear infinite
+}
+
+.shape-11 {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    -webkit-animation: animationFramesOne 12s linear infinite;
+    animation: animationFramesOne 12s linear infinite
+}
+
+@keyframes animationFramesOne {
+    0% {
+        transform: translate(0) rotate(0deg)
+    }
+
+    20% {
+        transform: translate(73px,-1px) rotate(36deg)
+    }
+
+    40% {
+        transform: translate(141px,72px) rotate(72deg)
+    }
+
+    60% {
+        transform: translate(83px,122px) rotate(108deg)
+    }
+
+    80% {
+        transform: translate(-40px,72px) rotate(144deg)
+    }
+
+    to {
+        transform: translate(0) rotate(0deg)
+    }
+}
+
+@-webkit-keyframes animationFramesOne {
+    0% {
+        -webkit-transform: translate(0) rotate(0deg)
+    }
+
+    20% {
+        -webkit-transform: translate(73px,-1px) rotate(36deg)
+    }
+
+    40% {
+        -webkit-transform: translate(141px,72px) rotate(72deg)
+    }
+
+    60% {
+        -webkit-transform: translate(83px,122px) rotate(108deg)
+    }
+
+    80% {
+        -webkit-transform: translate(-40px,72px) rotate(144deg)
+    }
+
+    to {
+        -webkit-transform: translate(0) rotate(0deg)
+    }
+}
+
+@keyframes animationFramesTwo {
+    0% {
+        transform: translate(0) rotate(0deg) scale(1)
+    }
+
+    20% {
+        transform: translate(73px,-1px) rotate(36deg) scale(.9)
+    }
+
+    40% {
+        transform: translate(141px,72px) rotate(72deg) scale(1)
+    }
+
+    60% {
+        transform: translate(83px,122px) rotate(108deg) scale(1.2)
+    }
+
+    80% {
+        transform: translate(-40px,72px) rotate(144deg) scale(1.1)
+    }
+
+    to {
+        transform: translate(0) rotate(0deg) scale(1)
+    }
+}
+
+@-webkit-keyframes animationFramesTwo {
+    0% {
+        -webkit-transform: translate(0) rotate(0deg) scale(1)
+    }
+
+    20% {
+        -webkit-transform: translate(73px,-1px) rotate(36deg) scale(.9)
+    }
+
+    40% {
+        -webkit-transform: translate(141px,72px) rotate(72deg) scale(1)
+    }
+
+    60% {
+        -webkit-transform: translate(83px,122px) rotate(108deg) scale(1.2)
+    }
+
+    80% {
+        -webkit-transform: translate(-40px,72px) rotate(144deg) scale(1.1)
+    }
+
+    to {
+        -webkit-transform: translate(0) rotate(0deg) scale(1)
+    }
+}
+
+@keyframes animationFramesThree {
+    0% {
+        transform: translate(165px,-179px)
+    }
+
+    to {
+        transform: translate(-346px,617px)
+    }
+}
+
+@-webkit-keyframes animationFramesThree {
+    0% {
+        -webkit-transform: translate(165px,-179px)
+    }
+
+    to {
+        -webkit-transform: translate(-346px,617px)
+    }
+}
+
+@keyframes animationFramesFour {
+    0% {
+        transform: translate(-300px,151px) rotate(0deg)
+    }
+
+    to {
+        transform: translate(251px,-200px) rotate(180deg)
+    }
+}
+
+@-webkit-keyframes animationFramesFour {
+    0% {
+        -webkit-transform: translate(-300px,151px) rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: translate(251px,-200px) rotate(180deg)
+    }
+}
+
+@media screen and (max-width: 1199.98px) {
+    .hot-search {
+        min-width:1164px
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .shape-10 {
+        right:12%;
+        width: 100px
+    }
+
+    .shape-11 {
+        right: 14%;
+        width: 100px
+    }
+
+    .comment-list .children .comment_body,.comment-list .children .comment-respond {
+        margin-left: 1.875rem
+    }
+}
+
+@-webkit-keyframes icon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes icon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+.APPInfo1{
+    width: 100%;
+    padding: 0 50px;
+    height: 200px;
+}
+.APPType{
+    display: inline;
+    background: #ECE6E6;
+    border-radius: 10px;
+    color: #D29A7B;
+    margin-right: 5px;
+}
+.IntroIMG{
+    border-radius: 10px;
+}
+.APPInfo2{
+    padding: 0 50px;
+}
+.APPInfo2 p{
+    font-size: 16px;
+    color: #888888;
+    text-align: justify;
+    line-height: 2em;
+}
+.IntroTitle{
+    text-align: left;
+}

@@ -1,0 +1,51 @@
+
+/* 给博客详情页使用的样式文件 */
+#blog-content{
+    padding: 30px;
+}
+
+h3{
+    text-align: center;
+    padding: 20px 0;
+}
+ p{
+    align-self: start;
+    text-indent: 2em;
+    padding: 10px 0;
+}
+img{
+    width: 80%;
+    vertical-align:middle;
+    margin: 0 auto;
+}
+.blogpicture{
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+}
+.replyimg{
+    width: 5%;
+}
+.commentimg{
+    width: 5%;
+}
+input[type='file'] {
+    opacity:0;
+}
+
+
+button{
+    display: inline-block;
+    float: inline-end; 
+    background-color: #dbcb92;
+    color: black;
+    border: 1px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pinglun{
+    margin: 30px;
+    padding-bottom: 5px;
+}

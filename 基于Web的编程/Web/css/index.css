@@ -1,0 +1,234 @@
+*{ margin:0; padding:0; font-family:"微软雅黑";}
+
+#nav{
+    background:#fff;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    height: 63px;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    z-index: 600;
+}
+#nav .header {
+    height: 62px;
+    margin: 0 auto;
+    position: relative;
+    width: 1130px;
+}
+#nav .header .logo {
+    display: inline;
+    float: left;
+    height: 62px;
+    margin-left: 33px;
+    width: 207px;
+}
+
+#nav .header .nav {
+    float: left;
+    margin: 0;
+    padding: 0 20px;
+    width: 357px;
+}
+
+#nav .header .searchTable{
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    padding: 14px 10px;
+    width: 290px;
+}
+
+#nav .header .login {
+    float: right;
+    padding: 17px 0;
+    align-content: center;
+    width: 120px;
+    height: 35px;
+    margin-right: 20px;
+}
+
+#nav .header .nav li {
+    margin: 0 10px;
+    list-style: none;
+    float: left;
+    font-size: 24px;
+    line-height: 62px;
+    text-align: center;
+    width: 80px;
+}
+
+#nav .header .nav li.nowNav {
+    float: left;
+    font-size: 26px;
+    border-bottom: #D29A7B 3px solid;
+    color: black;
+    line-height: 62px;
+    text-align: center;
+    width: 80px;
+}
+#nav .header .nav li a {
+    color: gray;
+    text-decoration: none;
+}
+#nav .header .nav li a:hover {
+    color: black;
+}
+#nav .header .searchTable .searchInput{
+    float: left;
+    height: 33px;
+    width: 240px;
+}
+#nav .header .searchTable .searchButton{
+    float: left;
+    margin-left: 1px;
+    height: 35px;
+    width: 35px;
+    background: white;
+}
+#nav .header .login a {
+    width: 55px;
+    height: 28px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+}
+
+#nav .header .login .a1 {
+    float: left;
+    border: 1px solid #ccc;
+}
+
+#nav .header .login .a2 {
+    float: right;
+    background: #DBCB92;
+    border: 1px solid #ccc;
+}
+
+#nav .header .login .a1:hover {
+    background: #DBCB92;
+}
+
+
+li{list-style:none;}
+a{color:#333; text-decoration:none;}
+
+#firstPage{margin:70px auto; position: relative;width: 1130px;background: #f4f6f9}
+/*轮播图*/
+.banner { width: 100%; height: 300px; margin: 0; }
+.bannerCon { width: 100%; height: 300px; margin: 0 auto; position: relative; text-align: center; }
+.bannerPic { width: 100%; height: 300px; overflow: hidden; padding: 0; margin: 0 auto; }
+.bannerPic img { width: 550px; height: 300px; display: none; padding: 5px; margin: 0; }
+.bannerList { width: 55px; height: 10px; background: rgba(0,0,0,.1); position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); border-radius: 12px; padding: 7px 4px; }
+.bannerList li { width: 8px; height: 8px; border: 1px solid #fff; list-style: none; float: left; margin: 0 4px; border-radius: 50%; cursor: pointer; }
+.bannerList .hov { background: #fff; }
+.bannerButton li { list-style: none; width: 50px; height: 70px; cursor: pointer; color: #fff; font-size: 34px; text-align: center; line-height: 70px; font-weight: 700; position: absolute; top: 100px; display: none; }
+.bannerButton li:hover { background: rgba(0,0,0,.2); }
+.bannerButton .bannerLeft { left: 20px; }
+.bannerButton .bannerRight { right: 20px; }
+.bannerCon:hover .bannerButton li { display: block; }
+
+
+
+/*动态资讯*/
+h2{
+    margin: 20px 0;
+    text-align: center;
+}
+.tbA{width: 100%;height: 130px}
+.tbA li{list-style:none;  float: left;height: 130px; width:130px; margin-bottom:10px;margin-right:10px;align-items: center}
+
+.txtBox{ background:url(../img/lineBg.png) repeat;height: 120px; width:120px; padding:5px; transform:rotateY(180deg);}
+.txtBox a{display:block; background:#fff; height: 90px;padding: 25px 20px 0;
+    text-align: center;}
+.txtBox a .type{ font-size: 18px;font-weight: bold;}
+.txtBox a  h3{ margin:20px 0;  font-size: 16px; font-weight: 500;}
+.txtBox a  p{  color: #888; text-align: left;    font-size: 14px;}
+/*旋转门*/
+.tbA li{
+    position:relative;
+    transform-style:preserve-3d;
+    perspective:800px;
+}
+.oA,.txtBox{/*安装们的位置*/ position:absolute; top:0; left:0;/*门轴*/ transform-origin:0;/*隐藏背面*/ backface-visibility:hidden; transition:all 0.8s linear;}
+/*前门*/
+.oA{}
+/*后门*/
+.txtBox{transform:rotateY(180deg);}
+.tbA li:hover .oA{ transform:rotateY(180deg);}
+.tbA li:hover .txtBox{transform:rotateY(360deg);}
+/*动态*/
+#myTable{
+    width: 1130px;
+    border-collapse: separate;
+    border-spacing: 10px; /* 适当调整间距的值 */
+}
+#myTable .myTD{
+    width: 1130px;
+    height: 120px;
+    margin: 10px;
+    /*border: #888888 solid;*/
+    background: white;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+td .contentTitle{
+    height: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 0 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+p{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+td .contentTitle:hover{
+    color: #D29A7B;
+}
+td .contentImg{
+    height: 90px;
+    width: 160px;
+    margin: 0 10px;
+}
+td .contentP{
+    max-width: 900px; /* 设置一个合适的最大宽度 */
+    margin: 2px 5px;
+    font-size: 16px;
+    text-align: justify;
+    color: #888888;
+    padding: 0;
+    word-wrap: break-word;
+    word-break: break-all;
+    /*overflow-wrap: break-word; /* 添加这一行 */
+}
+
+.footerContainer{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    font-size: 12px;
+    color: rgba(0,0,0,.6);
+    height: 130px;
+    min-height: 130px;
+    background-color: #f2f2f2;
+}
+.footerContainer .texts{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    justify-content: center;
+    width: 100%;
+    min-height: 0.625rem;
+    box-sizing: border-box;
+    padding: 0 0.55556rem;
+    margin: 0.13889rem 0;
+    display: inline-block;
+    white-space: normal;
+    text-align: center;
+}

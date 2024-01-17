@@ -1,0 +1,76 @@
+.upload {
+
+    margin-top: 70px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#title,
+#content,
+#image,
+#audio,
+#video {
+    display: inline;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+p {
+    display: inline;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cbb9af;
+}
+
+h3{
+    text-align: center;
+ }
+ #photo-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+ }
+ #user-photo {
+   margin: 10px; /* 设置选择文件按钮的外边距 */
+ }
+ #user-photo-container {
+   display: flex;
+   justify-content: center;
+ }
+ #photo-container img {
+   width: 100px; /* 设置图片宽度 */
+   height: 100px; /* 设置图片高度 */
+   margin: 10px; /* 设置图片间距 */
+ }
+
+ input[type='file'] {
+  opacity:0;
+}
+
+button{
+  background: #dbcb92;
+  color: black;
+}
