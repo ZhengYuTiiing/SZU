@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>drag API</title>
+  <style type="text/css">
+    h3{
+       text-align: center;
+    }
+    #photo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    #user-photo {
+      margin: 10px; /* 设置选择文件按钮的外边距 */
+    }
+    #user-photo-container {
+      display: flex;
+      justify-content: center;
+    }
+    #photo-container img {
+      width: 100px; /* 设置图片宽度 */
+      height: 100px; /* 设置图片高度 */
+      margin: 10px; /* 设置图片间距 */
+    }
+  </style>
+</head>
+<body>
+  <h3>拖拽可对图片进行排序</h3>
+  <hr />
+  <div id="user-photo-container">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="file" accept="image/*" multiple="multiple" id="user-photo" />
+  </div>
+  <div id="photo-container"></div>
+
+  <script>
+    var getUserPhoto = document.getElementById("user-photo");
+    getUserPhoto.onchange = function () {
+      var files = this.files;
+      console.log(files);
+      for (var i = 0; i < files.length; i++) {
+        try {
+          var reader = new FileReader();
+          var fileSize = files[i].size; // 获取文件大小
+          // 检查文件大小，这里限制为 5MB
+          if (fileSize > 5 * 1024 * 1024) {
+            throw new Error("文件过大，请选择小于5MB的图片");
+          }
+          // 使用 addEventListener，确保每个事件处理程序都引用正确的文件
+          reader.addEventListener("load", function (event) {
+            var image = document.createElement("img");
+            image.draggable = true;
+            image.src = event.target.result;
+            var showPicture = document.getElementById("photo-container");
+            showPicture.append(image);
+            image.addEventListener("dragstart", handleDragStart);
+            image.addEventListener("dragover", handleDragOver);
+            image.addEventListener("drop", handleDrop);
+          });
+          reader.readAsDataURL(files[i]);
+        } catch (error) {
+          console.error("发生错误:", error.message);
+          alert("发生错误：" + error.message);
+        }
+      }
+    };
+
+    // 记录拖拽的照片元素
+    let draggedPhoto = null;
+    // 拖拽开始时保存被拖拽的照片元素
+    function handleDragStart(event) {
+      draggedPhoto = event.target;
+    }
+    // 阻止默认的拖拽行为
+    function handleDragOver(event) {
+      event.preventDefault();
+    }
+    // 处理照片放置的位置
+    function handleDrop(event) {
+      event.preventDefault();
+      // 将被拖拽的照片插入到目标位置之前
+      const dropTarget = event.target;
+      const parentContainer = dropTarget.parentElement;
+      parentContainer.insertBefore(draggedPhoto, dropTarget);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我喜欢的明星 - Taylor Swift</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F2F2F2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image: url('bg2.jpg');
+            background-color: #333;
+            color: #FFF;
+            text-align: center;
+            padding: 1em 0;
+            opacity: 0;
+            /* 将初始透明度设为0 */  /* 使用动画效果 */
+            animation: fadeIn 2s ease-in-out forwards;    
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;  /* 初始透明度为0 */
+            }
+            to {
+                opacity: 1; /* 最终透明度为1 */
+            }
+        }
+
+
+        main {
+            max-width: 1200px;
+            margin: 2em auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        section {
+            flex: 0 1 calc(33.33% - 20px);
+            background-color: #FFF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1em;
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer {
+            display: flex;
+            background-color: #333;
+            color: #FFF;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        footer p {
+            width: 100%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>我喜欢的明星 - Taylor Swift</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>个人资料</h2>
+            <p>Taylor Swift，美国著名歌手、词曲作者、演员，生于1989年12月13日。</p>
+        </section>
+
+        <section>
+            <h2>音乐成就</h2>
+            <p>Taylor Swift凭借其深情的歌曲和卓越的创作才华，赢得了众多音乐奖项，包括多次获得格莱美奖。</p>
+        </section>
+
+        <section>
+            <h2>外貌特点</h2>
+            <p>Taylor Swift以其金发碧眼、甜美的笑容和时尚品味而备受瞩目。</p>
+        </section>
+    </main>
+
+    <main>
+        <section>
+            <h2>为什么喜欢</h2>
+            <p>Taylor Swift的音乐时常鼓励我前行，在我想放弃时给予我力量，她的努力勤奋、热心善良值得我学习。</p>
+        </section>
+
+        <section>
+            <h2>演艺生涯</h2>
+            <p>除了音乐，Taylor Swift还涉足演艺圈，在影视作品中展现了出色的表演才华。</p>
+        </section>
+
+        <section>
+            <h2>总结</h2>
+            <p>Taylor Swift以其音乐才华、创造力和社会影响力、个人品格，使她成为当代流行文化中备受尊敬和瞩目的女性之一。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 郑雨婷实验二Taylor Swift 页面</p>
+    </footer>
+</body>
+
+</html>

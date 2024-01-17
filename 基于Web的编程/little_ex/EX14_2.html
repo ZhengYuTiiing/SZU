@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机产生20个4位整数</title>
+</head>
+
+<body>
+    <div>
+        <textarea name="num-area" id="num-area" cols="50" rows="10"></textarea>
+    </div>
+    <div>
+        <button id="random-btn" onclick="handleGenerate()">随机产生20个整数</button>
+        <button id="divide-btn" onclick="handleSearch()">找出能被5整除的整数</button>
+        <button id="reset-btn" onclick="handleReset()">重置</button>
+    </div>
+
+    <script>
+        // write your code here
+        var Numbers = new Array(20);
+        var flag=0;
+        function handleGenerate() {
+            document.getElementById('num-area').value+="随机产生20个4位整数，分别如下：\n";
+            for (let i = 0; i < 20; i++) {
+                Numbers[i]=Math.round(Math.random() * (9999 - 1000) + 1000);
+            }
+            document.getElementById('num-area').value += Numbers.join(',');
+            document.getElementById('num-area').value += "\n";
+            Numbers.sort(function (a, b) {
+                return a - b;
+            });
+            document.getElementById('num-area').value += "从小到大排序后结果为：\n";
+            document.getElementById('num-area').value += Numbers.join(",");
+            document.getElementById('num-area').value += "\n";
+            flag=1;
+        }
+        function handleSearch() {
+            if(flag==1){
+                var array_tmp = new Array();
+                for (let i = 0; i < 20; i++) {
+                    if (Numbers[i] % 5 == 0) {
+                        array_tmp.push(Numbers[i]);
+                    }
+                }
+                document.getElementById('num-area').value += "能被5整除的整数有：\n";
+                document.getElementById('num-area').value += array_tmp.join(",");
+                document.getElementById('num-area').value += "\n";
+            }
+        }
+        function handleReset() {
+            document.getElementById('num-area').value= "";
+            flag = 0;
+        }
+        // 不可删, 用于自动化测试
+        window.handleGenerate = handleGenerate;
+        window.handleSearch = handleSearch;
+        window.handleReset = handleReset;
+    </script>
+</body>
+
+</html>

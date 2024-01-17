@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手机通讯录管理器</title>
+    <style>
+        .container {
+            width: 450px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: #EAEAEA;
+        }
+
+        fieldset {
+            text-align: center;
+        }
+
+        .button-box {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 请勿改动id、button数量及顺序,其他可视情况更改 -->
+        <header>
+            <h2>手机通讯录管理器</h2>
+        </header>
+        <form onsubmit="return false;">
+            <fieldset>
+                <legend>简易手机通讯录</legend>
+                姓名：<input type="text" name="name" id="name"> <br>
+                电话：<input type="text" name="phone" id="phone">
+                <div class="button-box">
+                    <input type="button" value="添加" onclick="handleAdd()">
+                    <input type="button" value="查询" onclick="handleSearch()">
+                    <input type="button" value="删除" onclick="handleDelete()">
+                    <input type="button" value="重置" onclick="handleReset()">
+                </div>
+                <textarea name="content" id="content" cols="35" rows="12" readonly></textarea>
+            </fieldset>
+        </form>
+        <div>
+            <h2>前端工作室设计 <br>版权所有&copy;,2017-2020</h2>
+        </div>
+    </div>
+    <script>
+        function $(id) { return document.getElementById(id); }
+        // 参考如下：
+        // 创建数据库
+        function loadData(){
+            $("content").value="";
+            if(localStorage.length>0){
+                for(let i=0;i<localStorage.length;i++){
+                    var key=localStorage.key(i);
+                    var value=localStorage.getItem(key);
+                    $("content").value+=value+" "+key+"\n";
+                }
+            }
+        }
+        function createDB() {
+            var request = window.indexedDB.open('phoneInfo', 1);
+            request.onerror = function (event) {
+                alert("数据库连接失败：" + event.target.errorCode);
+            }
+            request.onupgradeneeded = function (event) {
+                var db = request.result;
+                var store = db.createObjectStore("phone", { keyPath: "phone" });
+                console.log("create:" + db);
+            }
+            handleReset();
+            handleSearch();
+        }
+        // 处理添加
+        function handleAdd() {
+            var request = window.indexedDB.open('phoneInfo', 1);
+            request.onsuccess = function (event) {//捕获连接成功事件，并处理
+                var db = event.target.result;
+                var waring="";
+            var name=$("name").value;
+            var telephone=$("phone").value;
+            var reg = /^((?!\?|!|<|>|=|@|'|"|\(|\)).)*$/;
+          
+            if(name==""){
+                waring+="姓名不能为空.\n";
+            }else if (!reg.test(name)) {
+                waring += "姓名不能含有特殊字符！\n";
+            }
+            if(telephone==""){
+                waring+="电话不能为空.\n";
+            }
+            if(!reg.test(telephone)){
+                waring+="电话不能包含特殊字符。\n";
+            }
+
+            if(waring!=""){
+                alert(waring);
+            }
+            else{
+                var tag=0;
+                for(let i=0;i<localStorage.length;i++){
+                    var key=localStorage.key(i);
+                    if(key==telephone) {
+                        tag=1;
+                        break;
+                    }
+                }
+                if(tag==1){
+                    if(confirm("是否覆盖？")){
+                        localStorage.setItem(telephone,name);
+                    }
+                }
+                else{
+                    localStorage.setItem(telephone,name);
+                }
+                loadData();
+            }
+         
+            }
+        }
+        // 处理查询
+        function handleSearch() {
+            var request = window.indexedDB.open('phoneInfo', 1);
+            request.onsuccess = event => {//捕获连接成功事件，并处理
+                var db = event.target.result;
+                var waring="";
+            var name=$("name").value;
+            var telephone=$("phone").value;
+           
+            if(name==""&&telephone==""){
+                loadData();
+            }
+            else{
+                $("content").value="";
+                for(let i=0;i<localStorage.length;i++){
+                    var key=localStorage.key(i);
+                    var value=localStorage.getItem(key);
+                    if(value.search(name)!=-1&&key.search(telephone)!=-1){
+                        $("content").value+=value+" "+key+"\n";
+                    }
+                }
+            }
+            }
+        }
+        // 处理删除
+        function handleDelete() {
+            var request = window.indexedDB.open('phoneInfo', 1);
+            request.onsuccess = event => {//捕获连接成功事件，并处理
+                var db = event.target.result;  //连接成功时，获取数据库对象(也可用request.result)
+                var waring="";
+            var name=$("name").value;
+            var telephone=$("phone").value;
+           
+            if(name==""&&telephone==""){
+                waring+="姓名和电话号码不能为空.\n";
+            }
+            if(waring!=""){
+                alert(waring);
+            }
+            else{
+                var sum=0,index=0;;
+                for(let i=0;i<localStorage.length;i++){
+                    var key=localStorage.key(i);
+                    var value=localStorage.getItem(key);
+                    if(value.search(name)!=-1&&key.search(telephone)!=-1){
+                      sum++;
+                      index=i;
+                    }
+                }
+                if(sum==1) {
+                    localStorage.removeItem(localStorage.key(index));
+                    loadData();
+                }
+                else alert("删除的内容匹配多项，删除失败！");
+            }
+            }
+        }
+        // 处理重置
+        function handleReset() {
+            document.getElementById('name').value = "";
+            document.getElementById('phone').value = "";
+            document.getElementById('content').value = "";
+        }
+
+        // 如果出现TypeError: Cannot read properties of undefined (reading 'transaction')
+        // 可以尝试在handleXXX回调函数中重新open数据库初始化。
+        // 在request.onsuccess赋值db后继续续写逻辑。
+
+        // 页面加载时首先检测并创建数据库
+        createDB();
+
+        // 为了网站校验而需要额外设置的，正常情况下不需要
+        window.handleAdd = handleAdd;
+        window.handleSearch = handleSearch;
+        window.handleDelete = handleDelete;
+        window.handleReset = handleReset;
+    </script>
+</body>
+
+</html>

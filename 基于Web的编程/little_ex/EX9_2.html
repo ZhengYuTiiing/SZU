@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DIV+CSS布局</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family:黑体;
+            font-size: 37px;
+
+        }
+        .container {
+            margin-left: 2px;
+            margin-right: 2px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(85,255,85);
+            margin-bottom: 2px;
+        }
+
+        .nav {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(51,255,85);
+            margin-bottom: 2px;
+            vertical-align: center;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            height: 590px;
+            margin-bottom: 2px;
+        }
+
+        .content-left{
+            width: 25%;
+            height: 590px;
+            background-color: rgb(102,255,102);
+            margin-right: 2px;
+            float:left;
+        }
+        .content-center{
+            display: flex;
+            width: 50%;
+            height: 590px;
+        }
+        .content-center-left{
+            width: 50%;
+            height: 100%;
+            float: left;
+            background-color: rgb(119,255,102);
+            margin-right: 2px;
+        }
+        .content-center-right{
+            width: 50%;
+            height: 100%;
+            float: left;
+            background-color: rgb(136,255,221);
+            margin-right: 2px;
+        }
+        .content-right {
+            width: 25%;
+            height: 590px;
+            float: right;
+            background-color: rgb(153,255,102);
+        }
+
+        .footer {
+            width: 100%;
+            height: 50px;
+            background-color:rgb(102,255,204);
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo">logo</div>
+    <div class="nav">nav</div>
+    <div class="content">
+        <div class="content-left">Content-left</div>
+        <div class="content-center">
+            <div class="content-center-left">Content-center-left</div>
+            <div class="content-center-right">Content-center-right</div>
+        </div>
+        <div class="content-right">Content-right</div>
+    </div>
+    <div class="footer">Footer</div>
+
+</body>
+
+</html>

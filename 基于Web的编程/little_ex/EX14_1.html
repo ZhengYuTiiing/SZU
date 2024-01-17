@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <style>
+        fieldset {
+            background-color: #663399;
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            background-color: grey;
+            opacity: 0.7;
+        }
+
+        span {
+            color: white;
+        }
+
+        td {
+            text-align: center;
+            height: 38px;
+        }
+
+        .button-box {
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .table-box {
+            width: 270px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- onsubmit返回false：禁止页面跳转 -->
+    <form onsubmit="return false;">
+        <fieldset>
+            <legend>
+                <h2>用户登录</h2>
+            </legend>
+            <div class="table-box">
+                <table>
+                    <tr>
+                        <td><span>用户名</span></td>
+                        <td><input type="text" id="username"></td>
+                    </tr>
+                    <tr>
+                        <td><span>密 码</span></td>
+                        <td><input type="password" id="password"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button-box">
+                <input id="submit" type="submit" value="提交" onclick="window.submitTest()">
+                <input id="reset" type="reset" value="重置" onclick="window.resetTest()">
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        // 将函数挂载到window对象下
+        window.submitTest = function () {
+            var msg = "";
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == "") {
+                msg += "用户名不可为空！\n";
+                document.getElementById("username").focus();
+            } else if (username.length < 8) {
+                msg += "用户名过短，至少需要8个字符！\n"
+                document.getElementById("username").focus();
+            } else if (username.length > 20) {
+                msg += "用户名过长，最多20个字符！\n";
+                document.getElementById("username").focus();
+            }
+
+            if (password == "") {
+                msg += "密码不可为空！\n";
+                document.getElementById("password").focus();
+            } else if (password.length < 8) {
+                msg += "密码过短，至少需要8个字符！\n";
+                document.getElementById("password").focus();
+            } else if (password.length > 20) {
+                msg += "密码过长，最多20个字符！\n";
+                document.getElementById("password").focus();
+            }
+
+            if (msg.length)
+                alert(msg);
+        };
+
+        // 将函数挂载到window对象下
+        window.resetTest = function () {
+            confirm("数据重置！\n");
+        };
+    </script>
+</body>
+
+</html>

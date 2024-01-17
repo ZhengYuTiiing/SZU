@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+
+    <style>
+        fieldset {
+            width: 270px;
+            border-color: blue;
+        }
+
+        legend {
+            text-align: left;
+        }
+
+        #label {
+            text-align: justify;
+            text-align-last: justify;
+        }
+
+        #submit{
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        #reset{
+            margin-left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>登录页面</legend>
+            <table>
+                <tr>
+                    <td id="label">用户名：</td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td id="label">密码：</td>
+                    <td> <input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td id="label">类型：</td>
+                    <td>
+                        <input type="radio" value="root" name="usertype">管理员&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"
+                            value="user" name="usertype">普通用户<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" name="remember" val="remember">记住密码
+                        <input type="checkbox" name="autologin" val="autologin">自动登录
+                    </td>
+                </tr>
+                <tr id="buttoms">
+                    <td colspan="2">
+                        <input type="submit" value="提交" name="submit" id="submit">
+                        <input type="reset" val="重置" name="reset" id="reset">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>
